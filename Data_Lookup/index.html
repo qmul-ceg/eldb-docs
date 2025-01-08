@@ -1,0 +1,2143 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Data_Structure_Info/">
+      
+      
+        <link rel="next" href="../Data_Core/">
+      
+      
+      <link rel="icon" href="../img/logos/CEG_logo_sq.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Lookup Tables - CEG East London DataBase Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+3:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans 3";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="qmul" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lookup-tables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CEG East London DataBase Documentation" class="md-header__button md-logo" aria-label="CEG East London DataBase Documentation" data-md-component="logo">
+      
+  <img src="../img/logos/CEG_logo_white3.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CEG East London DataBase Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lookup Tables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="qmul" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Connect_Overview/" class="md-tabs__link">
+          
+  
+  Connecting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Data_Structure_Info/" class="md-tabs__link">
+          
+  
+  Data Information
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Website_Types%20of%20Website/" class="md-tabs__link">
+          
+  
+  Website Information
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CEG East London DataBase Documentation" class="md-nav__button md-logo" aria-label="CEG East London DataBase Documentation" data-md-component="logo">
+      
+  <img src="../img/logos/CEG_logo_white3.png" alt="logo">
+
+    </a>
+    CEG East London DataBase Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Connecting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Connecting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CEG VPN
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CEG VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_CEG-VPN_Setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CEG-VPN Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_CEG-VPN_Login/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CEG-VPN Login
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ELDB Server
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            ELDB Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_ELDB_Password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ELDB Server Password
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_SQL_Clients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL Clients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_ODBC_DSN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODBC Driver &amp; DSN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_MS_Access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_PowerQuery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power Query
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_SQLCMD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLCMD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_RStudio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R and RStudio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_Troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Information
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Information
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structure_Info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lookup Tables
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lookup Tables
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#age-bands-lu_ageband" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age Bands: lu_ageband
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Age Bands: lu_ageband">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-bands-key-lu_ageband_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age Bands Key: lu_ageband_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprivation-imd-lu_deprivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprivation (IMD): lu_deprivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsoa-lu_lsoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      LSOA: lu_lsoa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsoa-2021-lu_lsoa2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      LSOA 2021: lu_lsoa2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethnicity-lu_ethnicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethnicity: lu_ethnicity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethnicity: lu_ethnicity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethnicity-key-lu_ethnicity_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethnicity Key: lu_ethnicity_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethnicity-sde-lu_ethnicity_sde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethnicity SDE: lu_ethnicity_sde
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gp-practice-lu_practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      GP Practice: lu_practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smoking-lu_smoking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoking: lu_smoking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Smoking: lu_smoking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smoking-key-lu_smoking_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoking Key: lu_smoking_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CORE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Registers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Website Information
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Website Information
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Website_Types%20of%20Website/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types of Website
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#age-bands-lu_ageband" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age Bands: lu_ageband
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Age Bands: lu_ageband">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-bands-key-lu_ageband_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age Bands Key: lu_ageband_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprivation-imd-lu_deprivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprivation (IMD): lu_deprivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsoa-lu_lsoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      LSOA: lu_lsoa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsoa-2021-lu_lsoa2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      LSOA 2021: lu_lsoa2021
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethnicity-lu_ethnicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethnicity: lu_ethnicity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethnicity: lu_ethnicity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethnicity-key-lu_ethnicity_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethnicity Key: lu_ethnicity_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethnicity-sde-lu_ethnicity_sde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethnicity SDE: lu_ethnicity_sde
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gp-practice-lu_practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      GP Practice: lu_practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smoking-lu_smoking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoking: lu_smoking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Smoking: lu_smoking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smoking-key-lu_smoking_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smoking Key: lu_smoking_key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lookup-tables">Lookup Tables</h1>
+<hr />
+<h2 id="age-bands-lu_ageband">Age Bands: <code>lu_ageband</code></h2>
+<p>Age banded by a selection age band standards.</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>age</td>
+<td>patient age</td>
+</tr>
+<tr>
+<td>five_year</td>
+<td>five-year age bands (A:0-4 ~ W:110-114)</td>
+</tr>
+<tr>
+<td>five_year_term</td>
+<td>five-year age bands text term</td>
+</tr>
+<tr>
+<td>ten_year</td>
+<td>ten-year age bands (A:0-9 ~ L:110-119)</td>
+</tr>
+<tr>
+<td>ten_year_term</td>
+<td>ten-year age bands text term</td>
+</tr>
+<tr>
+<td>ons_a</td>
+<td>ONS A age bands (A:0-24 ~ D:65-119)</td>
+</tr>
+<tr>
+<td>ons_a_term</td>
+<td>ONS A age bands text term</td>
+</tr>
+<tr>
+<td>ons_b</td>
+<td>ONS B age bands (A:0-24 ~ E:75-119)</td>
+</tr>
+<tr>
+<td>ons_b_term</td>
+<td>ONS B age bands text term</td>
+</tr>
+<tr>
+<td>ons_c</td>
+<td>ONS C age bands (A:0-15 ~ I:85-119)</td>
+</tr>
+<tr>
+<td>ons_c_term</td>
+<td>ONS C age bands text term</td>
+</tr>
+<tr>
+<td>ons_d</td>
+<td>ONS D age bands (A:0-4 ~ R:85-119)</td>
+</tr>
+<tr>
+<td>ons_d_term</td>
+<td>ONS D age bands text term</td>
+</tr>
+<tr>
+<td>ons_e</td>
+<td>ONS E age bands (A:0-84 ~ F:105-119)</td>
+</tr>
+<tr>
+<td>ons_e_term</td>
+<td>ONS E age bands text term</td>
+</tr>
+<tr>
+<td>ons_f</td>
+<td>ONS F age bands (A:0-4 ~ S:90-119)</td>
+</tr>
+<tr>
+<td>ons_f_term</td>
+<td>ONS F age bands text term</td>
+</tr>
+<tr>
+<td>ons_g</td>
+<td>ONS G age bands (A:0-15 ~ C:65-119)</td>
+</tr>
+<tr>
+<td>ons_g_term</td>
+<td>ONS G age bands text term</td>
+</tr>
+<tr>
+<td>esp_1976</td>
+<td>European Std Population 1976 (A:0-4 ~ R:85-111)</td>
+</tr>
+<tr>
+<td>esp_1976_term</td>
+<td>European Std Population 1976 text term</td>
+</tr>
+<tr>
+<td>esp_2013</td>
+<td>European Std Population 2013 (A:0, B:1-4, C:5-9 ~ U:95-111)</td>
+</tr>
+<tr>
+<td>esp_2013_term</td>
+<td>European Std Population 2013 text term</td>
+</tr>
+<tr>
+<td>eth_band</td>
+<td>ethnicity report bands (A:0-4 ~ E:65-119)</td>
+</tr>
+<tr>
+<td>eth_band_term</td>
+<td>ethnicity report band text term</td>
+</tr>
+<tr>
+<td>profile_a</td>
+<td>population profiling a bands (A:16-18 ~ J:85-119)</td>
+</tr>
+<tr>
+<td>profile_a_term</td>
+<td>population profiling a bands text term</td>
+</tr>
+<tr>
+<td>profile_b</td>
+<td>population profiling b bands (A:0-4 ~ K:85-119)</td>
+</tr>
+<tr>
+<td>profile_b_term</td>
+<td>population profiling b bands text term</td>
+</tr>
+<tr>
+<td>ceg_piqi</td>
+<td>practice improvement quality indicators age bands (A:0-17 ~ D:65-119)</td>
+</tr>
+<tr>
+<td>ceg_piqi_term</td>
+<td>practice improvement quality indicators age bands text term</td>
+</tr>
+</tbody>
+</table>
+<h3 id="age-bands-key-lu_ageband_key">Age Bands Key: <code>lu_ageband_key</code></h3>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>age_std</td>
+<td>age banding standard</td>
+</tr>
+<tr>
+<td>band</td>
+<td>banding letter used with the age band standard</td>
+</tr>
+<tr>
+<td>term</td>
+<td>age band text term</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="deprivation-imd-lu_deprivation">Deprivation (IMD): <code>lu_deprivation</code></h2>
+<p>Lower Super Output Area (LSOA) defined in 2011 within northeast London with related Indices of Multiple Deprivation (IMD) based on 2015 and 2019 data. Quintiles (1 as most deprived) calculated within Local Authority, Integrated Care Partnership, east London region and nationally.</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LSOA_code_2011</td>
+<td>ONS code (e-code) for LSOA 2011</td>
+</tr>
+<tr>
+<td>LSOA_name_2011</td>
+<td>LSOA 2011 name (Local Authority name &amp; identifier)</td>
+</tr>
+<tr>
+<td>IMD_2015</td>
+<td>IMD score from 2015 IoD data</td>
+</tr>
+<tr>
+<td>IMD_2019</td>
+<td>IMD score from 2019 IoD data</td>
+</tr>
+<tr>
+<td>LA_code_2019</td>
+<td>ONS code (e-code) for local authority</td>
+</tr>
+<tr>
+<td>LA_name_2019</td>
+<td>Local Authority name</td>
+</tr>
+<tr>
+<td>LA_id</td>
+<td>Local Authority identifier (CL, HK, NH, TH, WF, BD, HV, RB)*</td>
+</tr>
+<tr>
+<td>LA_quintile_2015</td>
+<td>IMD_2015 quintile within Local Authority</td>
+</tr>
+<tr>
+<td>LA_quintile_2019</td>
+<td>IMD_2019 quintile within Local Authority</td>
+</tr>
+<tr>
+<td>ICP_id</td>
+<td>Integrated Care Partnership identifier (CH, BHR, TNW)*</td>
+</tr>
+<tr>
+<td>ICP_quintile_2015</td>
+<td>IMD_2015 quintile within Integrated Care Partnership</td>
+</tr>
+<tr>
+<td>ICP_quintile_2019</td>
+<td>IMD_2019 quintile within Integrated Care Partnership</td>
+</tr>
+<tr>
+<td>EL_id</td>
+<td>east London region identifier (IEL, OEL)*</td>
+</tr>
+<tr>
+<td>EL_quintile_2019</td>
+<td>IMD_2019 quintile within east London region</td>
+</tr>
+<tr>
+<td>NEL_quintile_2019</td>
+<td>IMD_2019 quintile within northeast London</td>
+</tr>
+<tr>
+<td>National_quintile_2019</td>
+<td>IMD_2019 quintile within England &amp; Wales</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>identifier</th>
+<th>area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CH</td>
+<td>City &amp; Hackney</td>
+</tr>
+<tr>
+<td>CL</td>
+<td>City of London</td>
+</tr>
+<tr>
+<td>HK</td>
+<td>Hackney</td>
+</tr>
+<tr>
+<td>TNW</td>
+<td>Tower Hamlets, Newham, &amp; Waltham Forest</td>
+</tr>
+<tr>
+<td>NH</td>
+<td>Newham</td>
+</tr>
+<tr>
+<td>TH</td>
+<td>Tower Hamlets</td>
+</tr>
+<tr>
+<td>WF</td>
+<td>Waltham Forest</td>
+</tr>
+<tr>
+<td>BHR</td>
+<td>Barking &amp; Dagenham, Havering &amp; Redbridge</td>
+</tr>
+<tr>
+<td>BD</td>
+<td>Barking &amp; Dagenham</td>
+</tr>
+<tr>
+<td>HV</td>
+<td>Havering</td>
+</tr>
+<tr>
+<td>RB</td>
+<td>Redbridge</td>
+</tr>
+<tr>
+<td>IEL</td>
+<td>Inner East London (CH, NH, TH)</td>
+</tr>
+<tr>
+<td>OEL</td>
+<td>Outer East London (WF, BD, HV, RB)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="lsoa-lu_lsoa">LSOA: <code>lu_lsoa</code></h2>
+<p>Lower Super Output Area (LSOA) defined in 2011 within England and Wales with associated local authorities.</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LSOA_code_2011</td>
+<td>ONS code (e-code) for LSOA 2011</td>
+</tr>
+<tr>
+<td>LSOA_name_2011</td>
+<td>LSOA 2011 name (Local Authority name &amp; identifier)</td>
+</tr>
+<tr>
+<td>LA_code_2019</td>
+<td>ONS code (e-code) for local authority</td>
+</tr>
+<tr>
+<td>LA_name_2019</td>
+<td>Local Authority name</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lsoa-2021-lu_lsoa2021">LSOA 2021: <code>lu_lsoa2021</code></h2>
+<p>Lower Super Output Area (LSOA) defined in 2021 within England and Wales with associated LSOA 2011, LAD 2022 + LAD 2019 (Local Authority), and IMD score 2019</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>table id</td>
+</tr>
+<tr>
+<td>lsoa2021_code</td>
+<td>ONS (e-code) for LSOA 2021</td>
+</tr>
+<tr>
+<td>lsoa2021_name</td>
+<td>LSOA 2021 name (Local Authority name &amp; identifier)</td>
+</tr>
+<tr>
+<td>changed</td>
+<td>relationship indicator for LSOA2011 to LSOA2021 (U, S, M, X)</td>
+</tr>
+<tr>
+<td>lsoa2011_code</td>
+<td>ONS code (e-code) for LSOA 2011</td>
+</tr>
+<tr>
+<td>lsoa2011_name</td>
+<td>LSOA 2011 name (Local Authority name &amp; identifier)</td>
+</tr>
+<tr>
+<td>lad2022_code</td>
+<td>ONS code (e-code) 2022 for local authority</td>
+</tr>
+<tr>
+<td>lad2022_name</td>
+<td>Local Authority name 2022</td>
+</tr>
+<tr>
+<td>lad2022_name_wales</td>
+<td>Local Authority name 2022 (Welsh Language)</td>
+</tr>
+<tr>
+<td>lad2019_code</td>
+<td>ONS code (e-code) 2019 for local authority</td>
+</tr>
+<tr>
+<td>lad2019_name</td>
+<td>Local Authority name 2019</td>
+</tr>
+<tr>
+<td>imd2019_score</td>
+<td>Indices of Multiple Deprivation score calculated by ONS</td>
+</tr>
+<tr>
+<td>imd2019_quintile</td>
+<td>Indices of Multiple Deprivation quintile calculated for England</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>identifier</th>
+<th>change action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U</td>
+<td>unchanged</td>
+</tr>
+<tr>
+<td>S</td>
+<td>split</td>
+</tr>
+<tr>
+<td>M</td>
+<td>merged</td>
+</tr>
+<tr>
+<td>X</td>
+<td>fragmented</td>
+</tr>
+</tbody>
+</table>
+<p>For more information, see the <a href="https://geoportal.statistics.gov.uk">ONS Open Geography Portal</a>.</p>
+<hr />
+<h2 id="ethnicity-lu_ethnicity">Ethnicity: <code>lu_ethnicity</code></h2>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>row identifier</td>
+</tr>
+<tr>
+<td>code</td>
+<td>code (SNOMED, Read2, CTV3, EMIS Local)</td>
+</tr>
+<tr>
+<td>dbid</td>
+<td>database identifier for code</td>
+</tr>
+<tr>
+<td>scheme</td>
+<td>code scheme identifier (71, 1040444, 1130062, 1335379)</td>
+</tr>
+<tr>
+<td>scheme_id</td>
+<td>text code scheme identifier (SN, R2, CTV3, EMLOC)</td>
+</tr>
+<tr>
+<td>Term</td>
+<td>code text description</td>
+</tr>
+<tr>
+<td>ceg_16</td>
+<td>ethnicity categorisation using CEG 16+1</td>
+</tr>
+<tr>
+<td>ceg_16_term</td>
+<td>CEG ethnicity categories text description</td>
+</tr>
+<tr>
+<td>nhs_5</td>
+<td>ethnicity categorisation using NHS 5+1</td>
+</tr>
+<tr>
+<td>nhs_5_term</td>
+<td>NHS 5+1 ethnicity categories text description</td>
+</tr>
+<tr>
+<td>nhs_16</td>
+<td>ethnicity categorisation using NHS 16+1</td>
+</tr>
+<tr>
+<td>nhs_16_term</td>
+<td>NHS 16+1ethnicity categories text description</td>
+</tr>
+<tr>
+<td>sn_concept</td>
+<td>SNOMED concept id</td>
+</tr>
+<tr>
+<td>sn_description</td>
+<td>SNOMED description id</td>
+</tr>
+<tr>
+<td>sn_term</td>
+<td>SNOMED code term</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>identifier</th>
+<th>code scheme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>71</td>
+<td>SNOMED</td>
+</tr>
+<tr>
+<td>1040444</td>
+<td>Read 2</td>
+</tr>
+<tr>
+<td>1130062</td>
+<td>CTV3</td>
+</tr>
+<tr>
+<td>1335379</td>
+<td>EMIS Local</td>
+</tr>
+<tr>
+<td>SN</td>
+<td>SNOMED</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Read 2</td>
+</tr>
+<tr>
+<td>CTV3</td>
+<td>CTV3</td>
+</tr>
+<tr>
+<td>EMLOC</td>
+<td>EMIS Local</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ethnicity-key-lu_ethnicity_key">Ethnicity Key: <code>lu_ethnicity_key</code></h3>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ethnic_std</td>
+<td>ethnicity standard</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>category letter used with ethnicity standard</td>
+</tr>
+<tr>
+<td>Term</td>
+<td>category text term</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ethnicity-sde-lu_ethnicity_sde">Ethnicity SDE: <code>lu_ethnicity_sde</code></h2>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>row identifier</td>
+</tr>
+<tr>
+<td>sn_code</td>
+<td>SNOMED concept id</td>
+</tr>
+<tr>
+<td>sn_name</td>
+<td>SNOMED description id</td>
+</tr>
+<tr>
+<td>sn_description</td>
+<td>SNOMED code term</td>
+</tr>
+<tr>
+<td>sde_5</td>
+<td>summary grouping of the 18+1 categories code value</td>
+</tr>
+<tr>
+<td>sde_5_name</td>
+<td>summary grouping of the 18+1 categories text description</td>
+</tr>
+<tr>
+<td>sde_18</td>
+<td>Self-Defined Ethnicity 18+1 code value</td>
+</tr>
+<tr>
+<td>sde_18_name</td>
+<td>Self-Defined Ethnicity 18+1 text description</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gp-practice-lu_practice">GP Practice: <code>lu_practice</code></h2>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>area_id</td>
+<td>area identifier for GP Practice (CH, NH, TH, WF, BK, HV, RB). This equates to the former CCGs and current Place-Based Partnerships or Areas within the <a href="https://northeastlondon.icb.nhs.uk/">North East London ICB</a>.</td>
+</tr>
+<tr>
+<td>area</td>
+<td>area name</td>
+</tr>
+<tr>
+<td>ods_code</td>
+<td>ODS (Organisation Data Service) identifier for the GP Practice. <a href="https://odsportal.digital.nhs.uk/">https://odsportal.digital.nhs.uk/</a></td>
+</tr>
+<tr>
+<td>practice_name</td>
+<td>GP Practice name, as defined for CEG reporting. This may differ from the name on ODS records.</td>
+</tr>
+<tr>
+<td>listsize</td>
+<td>currently registered patient count for practice at the run date</td>
+</tr>
+<tr>
+<td>status</td>
+<td>activity status for the practice at the run date (active, inactive)</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date the practice opened</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date the practice closed</td>
+</tr>
+<tr>
+<td>pcn_ods</td>
+<td>ODS identifier for the Primary Care Network (PCN) associated with the practice</td>
+</tr>
+<tr>
+<td>pcn_name</td>
+<td>name of associated PCN</td>
+</tr>
+<tr>
+<td>clinical_system</td>
+<td>clinical data system used by the practice (EMIS, SystmOne)</td>
+</tr>
+<tr>
+<td>uprn</td>
+<td>Unique Property Reference Number (UPRN) identifier for the address of the practice. <a href="https://uprn.uk/">https://uprn.uk/</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>identifier</th>
+<th>area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CH</td>
+<td>City &amp; Hackney</td>
+</tr>
+<tr>
+<td>NH</td>
+<td>Newham</td>
+</tr>
+<tr>
+<td>TH</td>
+<td>Tower Hamlets</td>
+</tr>
+<tr>
+<td>WF</td>
+<td>Waltham Forest</td>
+</tr>
+<tr>
+<td>BK</td>
+<td>Barking &amp; Dagenham</td>
+</tr>
+<tr>
+<td>HV</td>
+<td>Havering</td>
+</tr>
+<tr>
+<td>RB</td>
+<td>Redbridge</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="smoking-lu_smoking">Smoking: <code>lu_smoking</code></h2>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>row identifier</td>
+</tr>
+<tr>
+<td>code</td>
+<td>code (SNOMED, Read2, CTV3, EMIS Local)</td>
+</tr>
+<tr>
+<td>scheme</td>
+<td>code scheme identifier (71, 1040444, 1130062, 1335379)</td>
+</tr>
+<tr>
+<td>name</td>
+<td>code text description</td>
+</tr>
+<tr>
+<td>ndasmok_cod</td>
+<td>code inclusion in National Diabetes Audit (NDA) code cluster (NDASMOK_COD)</td>
+</tr>
+<tr>
+<td>smok_cod</td>
+<td>code inclusion in Quality Outcomes Framework (QOF) code cluster (SMOK_COD, NULL)</td>
+</tr>
+<tr>
+<td>smok_status_qof</td>
+<td>Quality Outcomes Framework (QOF) code cluster associated with code (LSMOK_COD, EXSMOK_COD, NSMOK_COD, NULL)</td>
+</tr>
+<tr>
+<td>smok_status</td>
+<td>smoking status based on code term and/or QOF code cluster (CSMOK, NONSMOK, EXSMOK, NSMOK, UNKNOWN)</td>
+</tr>
+<tr>
+<td>dbid</td>
+<td>database identifier for code</td>
+</tr>
+<tr>
+<td>sn_dbid</td>
+<td>database identifier for SNOMED code associated with code</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>identifier</th>
+<th>code scheme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>71</td>
+<td>SNOMED</td>
+</tr>
+<tr>
+<td>1040444</td>
+<td>Read 2</td>
+</tr>
+<tr>
+<td>1130062</td>
+<td>CTV3</td>
+</tr>
+<tr>
+<td>1335379</td>
+<td>EMIS Local</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>identifier</th>
+<th>smoking status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LSMOK_COD</td>
+<td>Smoker</td>
+</tr>
+<tr>
+<td>EXSMOK_COD</td>
+<td>Exsmoker</td>
+</tr>
+<tr>
+<td>NSMOK</td>
+<td>Never Smoked</td>
+</tr>
+<tr>
+<td>CSMOK</td>
+<td>Current Smoker</td>
+</tr>
+<tr>
+<td>NONSMOK</td>
+<td>Current Non-Smoker</td>
+</tr>
+<tr>
+<td>EXSMOK</td>
+<td>Exsmoker</td>
+</tr>
+<tr>
+<td>UNKNOWN</td>
+<td>smoking status cannot be defined</td>
+</tr>
+</tbody>
+</table>
+<h3 id="smoking-key-lu_smoking_key">Smoking Key: <code>lu_smoking_key</code></h3>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>numeric identifier to smoking status</td>
+</tr>
+<tr>
+<td>smok_status</td>
+<td>smoking status</td>
+</tr>
+<tr>
+<td>name</td>
+<td>name term for smoking status</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://www.qmul.ac.uk/ceg/" target="_blank" rel="noopener">Clinical Effectiveness Group</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
