@@ -1,0 +1,2404 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Data_Core/">
+      
+      
+        <link rel="next" href="../Website_Types%20of%20Website/">
+      
+      
+      <link rel="icon" href="../img/logos/QMUL_purple.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Registers - CEG East London DataBase Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+3:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans 3";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="qmul" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#registers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CEG East London DataBase Documentation" class="md-header__button md-logo" aria-label="CEG East London DataBase Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CEG East London DataBase Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Registers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="qmul" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Connect_Overview/" class="md-tabs__link">
+          
+  
+  
+  Connecting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Data_Structure_Info/" class="md-tabs__link">
+          
+  
+  
+  Data Dictionary
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Website_Types%20of%20Website/" class="md-tabs__link">
+          
+  
+  
+  Other Information
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CEG East London DataBase Documentation" class="md-nav__button md-logo" aria-label="CEG East London DataBase Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CEG East London DataBase Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Connecting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Connecting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CEG VPN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CEG VPN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_CEG-VPN_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install & Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_CEG-VPN_Login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging onto VPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ELDB Server
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            ELDB Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_ELDB_Password/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ELDB Authentication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application Connection
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Application Connection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_SQL_Clients/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL Clients
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_ODBC_DSN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ODBC & DSN Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_MS_Access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Microsoft Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_PowerQuery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerQuery (Excel & Power BI)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_SQLCMD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SQLCMD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_RStudio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    R & RStudio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Connect_Troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Potential Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Dictionary
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Data Dictionary
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structure_Info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Lookup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lookup Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core (Main Patient Table)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Registers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registers
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Fields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anxiety-anxiety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anxiety: anxiety
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asthma-asthma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asthma: asthma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atrial-fibrillation-atrial_fibrillation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atrial Fibrillation: atrial_fibrillation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autism-autism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autism: autism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancer-cancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancer: cancer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chronic-heart-disease-chd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Heart Disease: chd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chronic-kidney-disease-ckd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Kidney Disease: ckd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copd-chronic-obstructive-pulmonary-disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      copd (Chronic Obstructive Pulmonary Disease)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dementia" class="md-nav__link">
+    <span class="md-ellipsis">
+      dementia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depression" class="md-nav__link">
+    <span class="md-ellipsis">
+      depression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diabetes-diabetes-mellitus-dm" class="md-nav__link">
+    <span class="md-ellipsis">
+      diabetes (Diabetes Mellitus / DM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eating_disorder" class="md-nav__link">
+    <span class="md-ellipsis">
+      eating_disorder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epilepsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epilepsy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f_hypercholesterolemia-familial-hypercholesteremia-fh" class="md-nav__link">
+    <span class="md-ellipsis">
+      f_hypercholesterolemia (Familial Hypercholesteremia /FH)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestational-diabetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestational Diabetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heart-failure-hf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heart Failure (HF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hepatitis-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hepatitis B
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hepatitis-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hepatitis C
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-immunodeficiency-virus-hiv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Immunodeficiency Virus (HIV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypertension-ht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypertension (HT)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-disabilities-ld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Disabilities (LD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-neurone-disease-mnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor Neurone Disease (MND)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-sclerosis-ms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Sclerosis (MS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-diabetic-hyperglycaemia-ndh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Diabetic Hyperglycaemia (NDH)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obesity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obesity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osteoporosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Osteoporosis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palliative-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palliative Care
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parkinsons-disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parkinson's Disease
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peripheral-arterial-disease-pad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral Arterial Disease (PAD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personality-disorder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personality Disorder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#psoriasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Psoriasis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rheumatoid-arthritis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rheumatoid Arthritis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#severe-mental-illness-smi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Severe Mental Illness (SMI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sexually-transmitted-infection-sti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sexually Transmitted Infection (STI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sickle-cell-disease-scd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sickle Cell Disease (SCD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stroke-or-transient-ischaemia-attack-tia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stroke or Transient Ischaemia Attack (TIA)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other Information
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other Information
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Website_Types%20of%20Website/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    This Website
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Fields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anxiety-anxiety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anxiety: anxiety
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asthma-asthma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asthma: asthma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atrial-fibrillation-atrial_fibrillation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atrial Fibrillation: atrial_fibrillation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autism-autism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autism: autism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancer-cancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancer: cancer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chronic-heart-disease-chd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Heart Disease: chd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chronic-kidney-disease-ckd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Kidney Disease: ckd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copd-chronic-obstructive-pulmonary-disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      copd (Chronic Obstructive Pulmonary Disease)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dementia" class="md-nav__link">
+    <span class="md-ellipsis">
+      dementia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depression" class="md-nav__link">
+    <span class="md-ellipsis">
+      depression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diabetes-diabetes-mellitus-dm" class="md-nav__link">
+    <span class="md-ellipsis">
+      diabetes (Diabetes Mellitus / DM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eating_disorder" class="md-nav__link">
+    <span class="md-ellipsis">
+      eating_disorder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epilepsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epilepsy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f_hypercholesterolemia-familial-hypercholesteremia-fh" class="md-nav__link">
+    <span class="md-ellipsis">
+      f_hypercholesterolemia (Familial Hypercholesteremia /FH)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestational-diabetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestational Diabetes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heart-failure-hf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heart Failure (HF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hepatitis-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hepatitis B
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hepatitis-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hepatitis C
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-immunodeficiency-virus-hiv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Immunodeficiency Virus (HIV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypertension-ht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hypertension (HT)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-disabilities-ld" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Disabilities (LD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-neurone-disease-mnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor Neurone Disease (MND)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-sclerosis-ms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Sclerosis (MS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-diabetic-hyperglycaemia-ndh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Diabetic Hyperglycaemia (NDH)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obesity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obesity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osteoporosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Osteoporosis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palliative-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palliative Care
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parkinsons-disease" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parkinson's Disease
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peripheral-arterial-disease-pad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Peripheral Arterial Disease (PAD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personality-disorder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personality Disorder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#psoriasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Psoriasis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rheumatoid-arthritis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rheumatoid Arthritis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#severe-mental-illness-smi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Severe Mental Illness (SMI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sexually-transmitted-infection-sti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sexually Transmitted Infection (STI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sickle-cell-disease-scd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sickle Cell Disease (SCD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stroke-or-transient-ischaemia-attack-tia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stroke or Transient Ischaemia Attack (TIA)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="registers">Registers</h1>
+<p>The register tables contain all patients with a specified diagnosis or long term condition. The business rules syntax used to create the table is provided with cluster_id(s) and date ranges.</p>
+<h2 id="standard-fields">Standard Fields</h2>
+<p>Each table has the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>label</td>
+<td>descriptive label of the table contents. Be 'diabetes'</td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>area id for GP Practice</td>
+</tr>
+<tr>
+<td>ods_code</td>
+<td>ODS (Organisation Data Service) identifier for the GP Practice.</td>
+</tr>
+<tr>
+<td>person_id</td>
+<td>identifier of person</td>
+</tr>
+<tr>
+<td>patient_id</td>
+<td>identifier of patient at a practice</td>
+</tr>
+</tbody>
+</table>
+<p>Additional fields specific to the table are described below.</p>
+<hr />
+<h2 id="anxiety-anxiety">Anxiety: <code>anxiety</code></h2>
+<p>Anxiety code (ANX_CEG) recorded &gt;= last 24 months.</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>latest_date</td>
+<td>latest date of code for register</td>
+</tr>
+<tr>
+<td>latest_code</td>
+<td>SNOMED concept id for latest code</td>
+</tr>
+<tr>
+<td>latest_name</td>
+<td>code term for latest code</td>
+</tr>
+</tbody>
+</table>
+<p>Anxiety covers a range of Common Mental Health disorders, including</p>
+<ul>
+<li>Generalised Anxiety and Panic Attacks</li>
+<li>Anxiety associated with specific behaviours or situations</li>
+<li>Phobias</li>
+<li>Obsessive-Compulsive behaviour (OCD)</li>
+<li>Post-Trauma Stress (PSTD)</li>
+<li>Occupation-related Stress</li>
+</ul>
+<hr />
+<h2 id="asthma-asthma">Asthma: <code>asthma</code></h2>
+<p>Asthma code (AST_COD) excluding patients with a more recent resolved code (ASTRES_COD), and include Asthma Treatment meds code (ASTTRT_COD) recorded &gt;= last 12 months. (QOF)</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="atrial-fibrillation-atrial_fibrillation">Atrial Fibrillation: <code>atrial_fibrillation</code></h2>
+<p>Atrial Fibrillation code (AFIB_COD) excluding patients with a more recent resolved code (AFIBRES_COD)</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="autism-autism">Autism: <code>autism</code></h2>
+<p><em>Autism code (AUTISM_COD) recorded ever</em></p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cancer-cancer">Cancer: <code>cancer</code></h2>
+<p><em>Cancer code (CAN_COD) recorded &gt;= 2003-04-01</em></p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chronic-heart-disease-chd">Chronic Heart Disease: <code>chd</code></h2>
+<p><em>CHD code (CHD_COD) recorded ever</em></p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chronic-kidney-disease-ckd">Chronic Kidney Disease: <code>ckd</code></h2>
+<p><em>Aged &gt;= 18 years, and CKD code (CKD_COD) excluding patients with a more recent resolved code (CKDRES_COD) or a more recent CKD 1 or 2 code (CKD1AND2_COD)</em></p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="copd-chronic-obstructive-pulmonary-disease"><code>copd</code> (Chronic Obstructive Pulmonary Disease)</h2>
+<p>COPD code (COPD_COD) excluding patients with a more recent resolved code (COPDRES_COD), and where patients have a previous resolved code (COPDRES_COD), COPD code (COPD_COD) after the latest resolved code (COPDRES_COD)</p>
+<table>
+<thead>
+<tr>
+<th>fieldname</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>earliest_date</td>
+<td>earliest, ie diagnosis, date of code for register</td>
+</tr>
+<tr>
+<td>earliest_code</td>
+<td>SNOMED concept id for earliest code</td>
+</tr>
+<tr>
+<td>earliest_name</td>
+<td>code term for earliest code</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dementia"><code>dementia</code></h2>
+<p>Dementia code (DEM_COD) recorded ever</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="depression"><code>depression</code></h2>
+<p><em>Aged &gt;= 18 years, and Depression code (DEPR_COD) recorded &gt;= 2006-04-01 excluding patients with a more recent resolved code
+(DEPRES_COD)</em></p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+<li>latest_date -- latest, ie diagnosis, date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="diabetes-diabetes-mellitus-dm"><code>diabetes</code> (Diabetes Mellitus / DM)</h2>
+<p><em>Aged &gt;= 18 years, and Diabetes code (DM_COD) excluding patients with a more recent resolved code (DMRES_COD). Selecting most recent Diabetes Type code (DMTYPE1_COD, DMTYPE2_COD) to define diabetes type.</em></p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+<li>dm_type - diabetes type (TYPE_1 or TYPE_2) for each patient.</li>
+</ul>
+<h2 id="eating_disorder"><code>eating_disorder</code></h2>
+<p><em>Eating disorder code (EATINGDIS_CEG) recorded &gt;= last 24 months</em></p>
+<ul>
+<li>latest _date -- latest date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="epilepsy">Epilepsy</h2>
+<p><strong>epilepsy</strong>
+Epilepsy code (EPIL_COD) excluding patients with a more recent resolved code (EPILRES_COD), and include Epilepsy Drug meds code (EPILDRUG_COD) recorded &gt;= last 6 months</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="f_hypercholesterolemia-familial-hypercholesteremia-fh"><code>f_hypercholesterolemia</code> (Familial Hypercholesteremia /FH)</h2>
+<p>Familial Hypercholestelemia code (FHYP_COD) recorded ever</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="gestational-diabetes">Gestational Diabetes</h2>
+<p><strong>gestational_diabetes</strong>
+Gestational diabetes code (GESTDIAB_COD) recorded ever</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="heart-failure-hf">Heart Failure (HF)</h2>
+<p><strong>heart_failure</strong>
+Heart failure code (HF_COD) excluding patients with a more recent resolved code (HFRES_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="hepatitis-b">Hepatitis B</h2>
+<p><strong>hepatitis_b</strong>
+<em>Hepatitis B code (HBV_CEG) recorded ever</em></p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+<li>latest_date -- latest, ie diagnosis, date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="hepatitis-c">Hepatitis C</h2>
+<p><strong>hepatitis_c</strong>
+<em>Hepatitis C code (HCV_CEG) recorded ever</em></p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+<li>latest_date -- latest, ie diagnosis, date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="human-immunodeficiency-virus-hiv">Human Immunodeficiency Virus (HIV)</h2>
+<p><strong>hiv</strong>
+HIV code (HIV_CEG) recorded ever</p>
+<ul>
+<li>latest_date -- latest date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="hypertension-ht">Hypertension (HT)</h2>
+<p><strong>hypertension</strong>
+Hypertension (HYP_COD) excluding patients with a more recent resolved code (HYPRES_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="learning-disabilities-ld">Learning Disabilities (LD)</h2>
+<p><strong>learning_disabilities</strong>
+Learning Disabilities code (LD_COD) recorded ever</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="motor-neurone-disease-mnd">Motor Neurone Disease (MND)</h2>
+<p><strong>motor_neurone_disease</strong>
+Motor Neurone Disease code (MND_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="multiple-sclerosis-ms">Multiple Sclerosis (MS)</h2>
+<p><strong>multiple_sclerosis</strong>
+Multiple Sclerosis code (MS_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="non-diabetic-hyperglycaemia-ndh">Non-Diabetic Hyperglycaemia (NDH)</h2>
+<p><strong>non_dm_hyperglycaemia</strong>
+Aged &gt;= 18 years, and Non-Diabetic Hyperglycaemia code (NDH_COD) or IGT code (IGT_COD) or Pre-Diabetes code (PRD_COD) excluding patients with a Diabetes code (DM_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="obesity">Obesity</h2>
+<p><strong>obesity</strong>
+Aged &gt;= 18 years, and BMI Value code (BMIVAL_COD) &gt;=30 recorded &gt;= last 12 months, or Non-Value BMI Indicating &gt;= 30 code (BMI30_COD) recorded &gt;= last 12 months</p>
+<ul>
+<li>latest12m_date -- latest date of code for register in the last 12 months</li>
+<li>latest12m_code -- SNOMED concept id for latest code in the last 12 months</li>
+<li>latest12m_name -- code term for latest code in the last 12 months</li>
+<li>bmi30plus_latest12m_date -- latest date of code for register in the last 12 months with BMI &gt;=30</li>
+<li>bmi30plus_latest12m_code -- SNOMED concept id for latest code in the last 12 months with BMI &gt;=30</li>
+<li>bmi30plus_latest12m_name -- code term for latest code in the last 12 months BMI &gt;=30</li>
+</ul>
+<h2 id="osteoporosis">Osteoporosis</h2>
+<p><strong>osteoporosis</strong>
+Osteoporosis code (OSTEO_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="palliative-care">Palliative Care</h2>
+<p><strong>palliative_care</strong>
+Palliative Care code (PALCARE_COD) excluding patients with a more recent not indicated code (PALCARENI_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="parkinsons-disease">Parkinson's Disease</h2>
+<p><strong>parkinsons_disease</strong>
+Parkinson\'s Disease code (PD_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="peripheral-arterial-disease-pad">Peripheral Arterial Disease (PAD)</h2>
+<p><strong>pad</strong>
+PAD code (PAD_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="personality-disorder">Personality Disorder</h2>
+<p><strong>personality_disorder</strong>
+Personality Disorder code (PERSONALITYDIS_CEG)</p>
+<ul>
+<li>latest_date -- latest date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="psoriasis">Psoriasis</h2>
+<p><strong>psoriasis</strong>
+Psoriasis code (PSORIASIS_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="rheumatoid-arthritis">Rheumatoid Arthritis</h2>
+<p><strong>rh_arthritis</strong>
+Aged &gt;= 16 years, and Rheumatoid Arthritis code (RARTH_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="severe-mental-illness-smi">Severe Mental Illness (SMI)</h2>
+<p><strong>severe_mental_illness</strong>
+Mental Health code (MH_COD) excluding patients with a more recent remission code (MHREM_COD), and include Lithium meds code (LIT_COD) recorded &gt;= last 6 months excluding patients with a more recent Lithium Stopped code (LITSTP_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+<li>lithium_latest_date -- latest, ie prescription, date of code for medication recorded &gt;= last 6 months</li>
+<li>lithium_latest_code -- SNOMED concept id for latest code medication recorded &gt;= last 6 months</li>
+<li>lithium_latest_name -- code term for latest code medication recorded &gt;= last 6 months</li>
+</ul>
+<p>Mental Health excluding remission + Lithium (6m) excluding Lithium Stopped</p>
+<p>MH includes both schizophrenia and bipolar disorder and anyone on lithium who is not also coded having these conditions.</p>
+<h2 id="sexually-transmitted-infection-sti">Sexually Transmitted Infection (STI)</h2>
+<p><strong>sti</strong>
+Sexually Transmitted Infection code (STI_COD)</p>
+<ul>
+<li>latest_date -- latest date of code for register</li>
+<li>latest_code -- SNOMED concept id for latest code</li>
+<li>latest_name -- code term for latest code</li>
+</ul>
+<h2 id="sickle-cell-disease-scd">Sickle Cell Disease (SCD)</h2>
+<p><strong>sickle_cell</strong>
+Sickle Cell code (SICKLE_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+<h2 id="stroke-or-transient-ischaemia-attack-tia">Stroke or Transient Ischaemia Attack (TIA)</h2>
+<p><strong>stroke_tia</strong>
+Stroke code (STRK_COD) or TIA code (TIA_COD)</p>
+<ul>
+<li>earliest_date -- earliest, ie diagnosis, date of code for register</li>
+<li>earliest_code -- SNOMED concept id for earliest code</li>
+<li>earliest_name -- code term for earliest code</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://www.qmul.ac.uk/ceg/" target="_blank" rel="noopener">Clinical Effectiveness Group</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
